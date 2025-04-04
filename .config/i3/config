@@ -215,7 +215,6 @@ for_window [class="^.*"] border pixel 0
 gaps inner 10
 gaps outer 0
 
-# Start i3bar to display a workspace bar (plus the system information i3status
-# finds out, if available)
+# Start Polybar (Keep it running) by the custom script
 exec_always ~/.config/polybar/launch.sh --grayblocks
 
