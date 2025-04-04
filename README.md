@@ -9,10 +9,13 @@ These are dotfiles for the i3 OM Community Spin. They're all configured to work 
 - **Kitty** -> Colors, Font, Transparency;
 - **Picom** -> Transparency, Round Corners, Transition Fading;
 - **Polybar** -> Modules, Colors, Themes, Organization of Modules, Scripts;
-- **COnky** -> Position, Fonts, Colors, Information Displayed.
+- **Conky** -> Position, Fonts, Colors, Information Displayed.
 
 ## Resources used so far:
 ### - Manjaro's i3 Conky configuration -> https://github.com/oberon-manjaro/conkies/blob/master/config_i3/conky_maia
 - Only used as a base, modified
 ### - adi1090x's Grayblocks Polybar configuration -> https://github.com/adi1090x/polybar-themes?tab=readme-ov-file#grayblocks
 - Only used as a base, heavily modified
+
+## Additional Info
+For developing and requirements reasons, all of the dotfiles are made to be put into the user's home folder, not a system-wide folder. For this reason, only key elements will be visible when logged through ``root`` account, and the system will look broken. The shortcuts will all work though.
