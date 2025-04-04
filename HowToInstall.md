@@ -3,9 +3,9 @@
 ## Cloning the GitHub Repo
 ### - 1- Run the following commands:
 ```bash
-git clone https://github.com/klejdiLOL/i3-Dotfiles-OM-personal_only-/new/main
-cd i3-Dotfiles-OM-personal_only-
-sudo cp .config $HOME
+# git clone https://github.com/klejdiLOL/i3-Dotfiles-OM-personal_only-/new/main
+$ cd i3-Dotfiles-OM-personal_only-
+$ cp .config $HOME
 ```
 ## - Install Packages:
 ### -On OpenMandriva:
