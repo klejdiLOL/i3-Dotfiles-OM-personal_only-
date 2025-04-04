@@ -1,7 +1,8 @@
 # i3-Dotfiles-OM-personal_only-
 # i3 Dotfiles for the OM i3 Spin (MY CONTRIBUTION ONLY)
 
-These are dotfiles for the i3 OM Community Spin. They're all configured to work on the specified directories, and any change in paths will result in a break.
+These are dotfiles for the i3 OM Community Spin. They're all configured to work on the specified directories, and any change in paths **!!WILL RESULT IN A BREAK!!**.
+
 **Some files aren't fully modified from me, rather, just tested from me.**
 
 ## List of current dotfiles
