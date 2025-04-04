@@ -20,3 +20,6 @@ These are dotfiles for the i3 OM Community Spin. They're all configured to work 
 
 ## Additional Info
 For developing and requirements reasons, all of the dotfiles are made to be put into the user's home folder, not a system-wide folder. For this reason, only key elements will be visible when logged through ``root`` account, and the system will look broken. The shortcuts will all work though.
+
+## Note: License
+This repository is Unlicensed. Although, different programs and software included in this repository have different licenses and different copyright owners. **!!NO COPYRIGHT INTENDED FOR THIS WORK OF MINE!!**
