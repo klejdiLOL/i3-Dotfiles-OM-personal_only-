@@ -12,9 +12,9 @@ These are dotfiles for the i3 OM Community Spin. They're all configured to work 
 - **Conky** -> Position, Fonts, Colors, Information Displayed.
 
 ## Resources used so far:
-### - Manjaro's i3 Conky configuration -> https://github.com/oberon-manjaro/conkies/blob/master/config_i3/conky_maia
+### - Manjaro's i3 Conky configuration -> [GitHub Page](https://github.com/oberon-manjaro/conkies/blob/master/config_i3/conky_maia)
 - Only used as a base, modified
-### - adi1090x's Grayblocks Polybar configuration -> https://github.com/adi1090x/polybar-themes?tab=readme-ov-file#grayblocks
+### - adi1090x's Grayblocks Polybar configuration -> [GitHub Page](https://github.com/adi1090x/polybar-themes?tab=readme-ov-file#grayblocks)
 - Only used as a base, heavily modified
 
 ## Additional Info
