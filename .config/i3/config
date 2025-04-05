@@ -79,7 +79,7 @@ bindsym $mod+d exec "rofi -no-config -no-lazy-grab -show drun -modi drun -theme 
 set $ranger ranger
 
 # set browser
-set $browser firefox
+set $browser chromium
 
 # set terminal
 set $terminal kitty
