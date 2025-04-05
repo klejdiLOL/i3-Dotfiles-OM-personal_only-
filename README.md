@@ -12,6 +12,9 @@ These are dotfiles for the i3 OM Community Spin. They're all configured to work 
 - **Polybar** -> Modules, Colors, Themes, Organization of Modules, Scripts;
 - **Conky** -> Position, Fonts, Colors, Information Displayed.
 
+## Installation
+Follow the guide on [HowToInstall.md](https://github.com/klejdiLOL/i3-Dotfiles-OM-personal_only-/blob/main/HowToInstall.md). Please don't forget that these configurations are made specifically to match OpenMandirva's prerequesties and schemes (in other words, they're branded with OpenMandriva's resources).
+
 ## Resources used so far:
 ### - Manjaro's i3 Conky configuration -> [GitHub Page](https://github.com/oberon-manjaro/conkies/blob/master/config_i3/conky_maia)
 - Only used as a base, modified
