@@ -1,3 +1,9 @@
+# om-dark.micro
+# author: Wilson Phillips
+# OpenMandriva
+# https://forum.openmandriva.org/
+# Location: ~/.config/micro/colorschemes/om-dark.micro
+
 color-link default "#ecf2ff,#21242b"
 color-link comment "#afb3bd,#21242b"
 color-link identifier "#40a5da,#21242b"
