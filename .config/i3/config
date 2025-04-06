@@ -70,6 +70,9 @@ exec_always --no-startup-id conky -c ~/.config/conky/conky.conf
 # start picom (keep it running)
 exec_always --no-startup-id picom
 
+# start autotiling (keep it running)
+exec_always --no-startup-id autotiling
+
 # kill focused window
 bindsym $mod+Shift+q kill
 
@@ -227,7 +230,6 @@ for_window [class="^.*"] border pixel 0
 gaps inner 10
 gaps outer 0
 
-# Start i3bar to display a workspace bar (plus the system information i3status
-# finds out, if available)
+# Start Polybar (keep it running)
 exec_always ~/.config/polybar/launch.sh &
 
