@@ -33,25 +33,6 @@ $ cp -r .local $HOME
   # dnf install --enablerepo=cooker-aarch64 i3-gaps polybar rofi kitty conky picom feh ranger vim micro nano lxappearance kvantum dnfdrake chromium fonts-ttf-nerd-jetbrains-mono
   ```
   If neither work, **contact the support team on either the [Matrix](https://app.element.io/#/room/#openmandriva-space:matrix.org) channel or the [Forum](https://forum.openmandriva.org/)
-  ### -On Ubuntu:
-  ```bash
-  # apt update
-  # apt install i3-gaps polybar rofi kitty conky picom feh ranger vim micro nano lxappearance kvantum chromium fonts-ttf-nerd-jetbrains-mono
-  ```
-  ### -On Debian:
-  ```bash
-  # apt update
-  # apt install i3-gaps polybar rofi kitty conky picom feh ranger vim micro nano lxappearance kvantum chromium fonts-ttf-nerd-jetbrains-mono
-  ```
-  ### -On Fedora:
-  ```bash
-  # dnf update
-  # dnf install i3-gaps polybar rofi kitty conky picom feh ranger vim micro nano lxappearance kvantum chromium fonts-ttf-nerd-jetbrains-mono
-  ```
-  ### -On Arch Linux:
-  ```bash
-  # pacman -Syui3-gaps polybar rofi kitty conky picom feh ranger vim micro nano lxappearance kvantum chromium fonts-ttf-nerd-jetbrains-mono
-  ```
 ## Make the launch files executable
 ### The Polybar scripts:
 ```bash
