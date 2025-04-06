@@ -52,6 +52,21 @@ $ cp -r .local $HOME
   ```bash
   # pacman -Syui3-gaps polybar rofi kitty conky picom feh ranger vim micro nano lxappearance kvantum chromium fonts-ttf-nerd-jetbrains-mono
   ```
+## Make the launch files executable
+### The Polybar scripts:
+```bash
+$ cd $HOME/.config/polybar/
+# chmod -x launch.sh
+$ cd scripts
+# chmod -x launcher.sh
+# chmod -x powermenu.sh
+```
+### The Rofi scripts:
+```bash
+$ cd $HOME/.config/rofi/
+# chmod -x launcher.sh
+# chmod -x powermenu.sh
+```
   ## ***Spin up that thing!***
   If using a minimal install, also install a Login Manager. Preferably, go with LightDM (general package name:``lightdm-gtk-greeter``)
   After that, do a **REBOOT**, choose ``i3`` (Not ``i3 (debug log``), and enjoy.
