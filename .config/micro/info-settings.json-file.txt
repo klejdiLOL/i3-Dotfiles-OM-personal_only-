@@ -1,0 +1,5 @@
+# settings.json
+# Wilson Phillips
+# OpenMandriva
+# https://forum.openmandriva.org/
+# Location: ~/.config/micro/settings.json
