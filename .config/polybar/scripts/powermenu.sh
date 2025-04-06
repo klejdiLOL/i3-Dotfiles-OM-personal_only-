@@ -1,5 +1,11 @@
 #!/usr/bin/env bash
 
+# powermenu.sh
+# author: Klejdi Janari (klejdiLOL)
+# OpenMandriva
+# https://forum.openmandriva.org/
+# Location: ~/.config/polybar/scripts/powermenu.sh
+
 dir="~/.config/polybar/scripts/rofi"
 uptime=$(uptime -p | sed -e 's/up //g')
 
