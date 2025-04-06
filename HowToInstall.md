@@ -1,8 +1,6 @@
 # How To Install My Configurations
 
 Suggest you follow the instructions as listed. You can go the other way around, installing the packages and then installing the dotfiles, but that will be a bigger hassle.
-
-**This Configuration is universal, can be installed on any distro, but only as far as the distro has the listed packages available. If not, look at the packages' webpage.**
 ## Cloning the GitHub Repo
 ### - 1- Run the following commands:
 ```bash
