@@ -233,3 +233,28 @@ gaps outer 0
 # Start Polybar (keep it running)
 exec_always ~/.config/polybar/launch.sh &
 
+# add window focus borders
+
+for_window [class="^.*"] border pixel 2
+
+set $om-blue   #2080BB
+set $white     #ffffff
+set $om-pink   #E2266E
+set $red       #f38ba8
+set $maroon    #eba0ac
+set $peach     #fab387
+set $yellow    #f9e2af
+set $green     #a6e3a1
+set $text      #cdd6f4
+set $overlay0  #6c7086
+set $base      #1e1e2e
+set $mantle    #181825
+set $crust     #11111b
+
+# target                 title     bg       text     indicator    border
+client.focused           $mantle   $om-pink $mantle  $om-blue     $white
+client.focused_inactive  $overlay0 $om-pink $text    $om-blue     $overlay0
+client.unfocused         $overlay0 $om-pink $text    $om-blue     $overlay0
+client.urgent            $peach    $base    $peach   $overlay0    $peach
+client.placeholder       $overlay0 $base    $text    $overlay0    $overlay0
+client.background        $base
