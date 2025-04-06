@@ -1,6 +1,10 @@
 #!/usr/bin/env bash
 
-# Add this script to your wm startup file.
+# launch.sh
+# author: Klejdi Janari (klejdiLOL)
+# OpenMandriva
+# https://forum.openmandriva.org/
+# Location: ~/.config/polybar/launch.sh
 
 # Terminate already running bar instances
 killall -q polybar
