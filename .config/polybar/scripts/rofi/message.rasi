@@ -1,3 +1,9 @@
+/* message.rasi */
+/* author: Klejdi Janari (klejdiLOL) */
+/* OpenMandriva */
+/* https://forum.openmandriva.org/ */
+/* Location: ~/.config/polybar/scripts/rofi/message.rasi */
+
 /* Confirm Dialog */
 
 @import "colors.rasi"
