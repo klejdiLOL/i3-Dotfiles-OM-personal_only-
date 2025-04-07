@@ -2,7 +2,7 @@
 /* author: Klejdi Janari (klejdiLOL) */
 /* OpenMandriva */
 /* https://forum.openmandriva.org/ */
-/* Location: ~/.config/polybar/scripts/rofi/launcher.rasi */
+/* Location: ~/.config/rofi/rofi/launcher.rasi */
 
 configuration {
 	font:							"Iosevka Nerd Font 10";
