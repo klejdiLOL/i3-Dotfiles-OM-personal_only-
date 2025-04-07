@@ -14,21 +14,21 @@ $ cp -r .local $HOME
   **OM ROME & ROME-based Spins:**
   ```bash
   # dnf --refresh distro-sync
-  # dnf install i3-gaps polybar rofi kitty conky picom feh ranger vim micro nano lxappearance kvantum dnfdrake chromium fonts-ttf-nerd-jetbrains-mono
+  # dnf install i3-gaps polybar rofi kitty conky picom feh ranger vim micro nano lxappearance kvantum dnfdrake chromium fonts-ttf-nerd-jetbrains-mono python-autotiling om-extra-wallpapers-twm
   ```
   **OM ROCK & ROCK-based Spins:**
   ```bash
   # dnf --refresh distro-sync
-  # dnf install i3-gaps polybar rofi kitty conky picom feh ranger vim micro nano lxappearance kvantum dnfdrake chromium fonts-ttf-nerd-jetbrains-mono
+  # dnf install i3-gaps polybar rofi kitty conky picom feh ranger vim micro nano lxappearance kvantum dnfdrake chromium fonts-ttf-nerd-jetbrains-mono python-autotiling om-extra-wallpapers-twm
   ```
   ---Depending on the repos' status, installation through said command may fail. If so, run either of the below commands, depending on your architecture---
   For x86_64:
   ```bash
-  # dnf install --enablerepo=cooker-x86_64 i3-gaps polybar rofi kitty conky picom feh ranger vim micro nano lxappearance kvantum dnfdrake chromium fonts-ttf-nerd-jetbrains-mono
+  # dnf install --enablerepo=cooker-x86_64 i3-gaps polybar rofi kitty conky picom feh ranger vim micro nano lxappearance kvantum dnfdrake chromium fonts-ttf-nerd-jetbrains-mono python-autotiling om-extra-wallpapers-twm
   ```
   For aarch64:
   ```bash
-  # dnf install --enablerepo=cooker-aarch64 i3-gaps polybar rofi kitty conky picom feh ranger vim micro nano lxappearance kvantum dnfdrake chromium fonts-ttf-nerd-jetbrains-mono
+  # dnf install --enablerepo=cooker-aarch64 i3-gaps polybar rofi kitty conky picom feh ranger vim micro nano lxappearance kvantum dnfdrake chromium fonts-ttf-nerd-jetbrains-mono python-autotiling om-extra-wallpapers-twm
   ```
   If neither work, **contact the support team on either the [Matrix](https://app.element.io/#/room/#openmandriva-space:matrix.org) channel or the [Forum](https://forum.openmandriva.org/)**
 ## Make the launch files executable
