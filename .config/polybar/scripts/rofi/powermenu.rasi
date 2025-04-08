@@ -16,7 +16,7 @@ window {
 	location: southeast;            /* Bottom right */
 	anchor: southeast;
 	x-offset: 0;                   /* 10px from the right edge */
-	y-offset: -37;                   /* 37px from the bottom edge */
+	y-offset: -38;                   /* 37px from the bottom edge */
 	transparency: "real";
 	background-color: @bg;
 	text-color: @fg;
