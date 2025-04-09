@@ -10,7 +10,8 @@ These are dotfiles for the i3 OM Community Spin. They're all configured to work 
 - **Kitty** -> Colors, Font, Transparency;
 - **Picom** -> Transparency, Round Corners, Transition Fading;
 - **Polybar** -> Modules, Colors, Themes, Organization of Modules, Scripts;
-- **Conky** -> Position, Fonts, Colors, Information Displayed.
+- **Conky** -> Position, Fonts, Colors, Information Displayed;
+- **Rofi** -> Powermenu, App menu, Colors, Fonts, Position and size.
 
 ## Installation
 Follow the guide on [HowToInstall.md](https://github.com/klejdiLOL/i3-Dotfiles-OM-personal_only-/blob/main/HowToInstall.md). Please don't forget that these configurations are made specifically to match OpenMandirva's prerequesties and schemes (in other words, they're branded with OpenMandriva's resources).
