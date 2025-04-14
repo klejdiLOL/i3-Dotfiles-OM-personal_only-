@@ -35,16 +35,21 @@ $ cp -r .local $HOME
 ### The Polybar scripts:
 ```bash
 $ cd $HOME/.config/polybar/
-# chmod -x launch.sh
+# chmod +x launch.sh
 $ cd scripts
-# chmod -x launcher.sh
-# chmod -x powermenu.sh
+$ chmod +x launcher.sh
+$ chmod +x powermenu.sh
 ```
 ### The Rofi scripts:
 ```bash
 $ cd $HOME/.config/rofi/
-# chmod -x launcher.sh
-# chmod -x powermenu.sh
+$ chmod +x launcher.sh
+$ chmod +x powermenu.sh
+```
+### The i3lock script
+```bash
+$ cd $HOME/.config/i3lock-color/scripts/
+$ chmod +x lockscreen.sh
 ```
   ## ***Spin up that thing!***
   If using a minimal install, also install a Login Manager. Preferably, go with LightDM (general package name:``lightdm-gtk-greeter``)
