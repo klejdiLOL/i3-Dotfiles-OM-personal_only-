@@ -1,10 +1,10 @@
 #!/bin/bash
 # ── CONFIG ────────────────────────────────────────────
 
-# Fonts – adjust if necessary
-FONT1="JetBrainsMono Nerd Font"
-FONT2="Liberation Mono"
-FONT3="Noto Sans Mono"
+# Bold Fonts – update these if your system uses other naming
+BOLD_FONT1="JetBrainsMono Nerd Font Bold"
+BOLD_FONT2="Liberation Mono Bold"
+BOLD_FONT3="Noto Sans Mono Bold"
 
 # Screenshot path
 IMG="/tmp/i3lock_blur.png"
@@ -13,9 +13,9 @@ IMG="/tmp/i3lock_blur.png"
 
 # Get screen resolution width (requires xrandr)
 SCREEN_WIDTH=$(xrandr | grep '*' | awk '{print $1}' | head -n1 | cut -d 'x' -f1)
-# Define a base width for scaling calculations (modify if needed)
+# Define a base width for scaling (modify if needed)
 BASE_WIDTH=1920
-# Calculate the scaling factor (as a float)
+# Calculate scaling factor (ex: for a 1280px wide screen, scale=0.66)
 SCALE=$(echo "scale=2; $SCREEN_WIDTH / $BASE_WIDTH" | bc)
 
 # Base font sizes for a 1920-wide display
@@ -42,6 +42,7 @@ echo "Font sizes: Time=$TIME_SIZE, Date=$DATE_SIZE, Layout=$LAYOUT_SIZE, Greeter
 
 # Capture the current screen and blur it (using ImageMagick)
 import -window root "$IMG"
+# Using ImageMagick v7: use "magick" instead of "convert"
 magick "$IMG" -blur 0x8 "$IMG"
 
 # Kill any lingering processes (sound listeners removed)
@@ -52,22 +53,22 @@ pkill -f "evtest" 2>/dev/null
 
 i3lock \
     --image "$IMG" \
-    --inside-color="#232627cc" \
-    --ring-color="#2080bbff" \
-    --line-color="#232627ff" \
-    --separator-color="#444444ff" \
-    --keyhl-color="#4bff8aff" \
-    --bshl-color="#e2266eff" \
-    --ringver-color="#40da76ff" \
-    --ringwrong-color="#e2266eff" \
-    --insidever-color="#232627cc" \
-    --insidewrong-color="#232627cc" \
-    --verif-color="#ffffffff" \
-    --wrong-color="#ffffffff" \
-    --layout-color="#ffffffff" \
-    --time-color="#ffffffff" \
-    --date-color="#ffffffff" \
-    --greeter-color="#ffffffcc" \
+    --inside-color="#21242Bcc" \
+    --ring-color="#40A5DAff" \
+    --line-color="#000000ff" \
+    --separator-color="#AFB3BDff" \
+    --keyhl-color="#40da76ff" \
+    --bshl-color="#E2266Eff" \
+    --ringver-color="#2080BBff" \
+    --ringwrong-color="#E2266Eff" \
+    --insidever-color="#21242Bcc" \
+    --insidewrong-color="#21242Bcc" \
+    --verif-color="#FFFFFFFF" \
+    --wrong-color="#FFFFFFFF" \
+    --layout-color="#FFFFFFFF" \
+    --time-color="#FFFFFFFF" \
+    --date-color="#FFFFFFFF" \
+    --greeter-color="#FFFFFFcc" \
     --noinput-text="" \
     --pass-media-keys \
     --radius=130 \
@@ -76,12 +77,12 @@ i3lock \
     --verif-text="Checking..." \
     --greeter-text="Type to unlock" \
     --clock --indicator \
-    --time-font="$FONT1" \
-    --date-font="$FONT2" \
-    --layout-font="$FONT3" \
-    --verif-font="$FONT1" \
-    --wrong-font="$FONT1" \
-    --greeter-font="$FONT2" \
+    --time-font="$BOLD_FONT1" \
+    --date-font="$BOLD_FONT2" \
+    --layout-font="$BOLD_FONT3" \
+    --verif-font="$BOLD_FONT1" \
+    --wrong-font="$BOLD_FONT1" \
+    --greeter-font="$BOLD_FONT2" \
     --time-size=$TIME_SIZE \
     --date-size=$DATE_SIZE \
     --layout-size=$LAYOUT_SIZE \
