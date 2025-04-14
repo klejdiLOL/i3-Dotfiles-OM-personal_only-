@@ -1,7 +1,7 @@
 #!/bin/bash
 # ── CONFIG ────────────────────────────────────────────
 
-# Bold Fonts – update these if your system uses other naming
+# Bold Fonts – adjust these if your system uses different naming conventions
 BOLD_FONT1="JetBrainsMono Nerd Font Bold"
 BOLD_FONT2="Liberation Mono Bold"
 BOLD_FONT3="Noto Sans Mono Bold"
@@ -15,7 +15,7 @@ IMG="/tmp/i3lock_blur.png"
 SCREEN_WIDTH=$(xrandr | grep '*' | awk '{print $1}' | head -n1 | cut -d 'x' -f1)
 # Define a base width for scaling (modify if needed)
 BASE_WIDTH=1920
-# Calculate scaling factor (ex: for a 1280px wide screen, scale=0.66)
+# Calculate scaling factor (e.g., for a 1280px wide screen, scale ≈ 0.66)
 SCALE=$(echo "scale=2; $SCREEN_WIDTH / $BASE_WIDTH" | bc)
 
 # Base font sizes for a 1920-wide display
@@ -34,7 +34,7 @@ GREETER_SIZE=$(printf "%.0f" $(echo "$BASE_GREETER_SIZE * $SCALE" | bc))
 VERIF_SIZE=$(printf "%.0f" $(echo "$BASE_VERIF_SIZE * $SCALE" | bc))
 WRONG_SIZE=$(printf "%.0f" $(echo "$BASE_WRONG_SIZE * $SCALE" | bc))
 
-# Debug info (optional)
+# Optional debug info
 echo "Screen width: $SCREEN_WIDTH, Scale: $SCALE"
 echo "Font sizes: Time=$TIME_SIZE, Date=$DATE_SIZE, Layout=$LAYOUT_SIZE, Greeter=$GREETER_SIZE, Verif=$VERIF_SIZE, Wrong=$WRONG_SIZE"
 
@@ -42,10 +42,10 @@ echo "Font sizes: Time=$TIME_SIZE, Date=$DATE_SIZE, Layout=$LAYOUT_SIZE, Greeter
 
 # Capture the current screen and blur it (using ImageMagick)
 import -window root "$IMG"
-# Using ImageMagick v7: use "magick" instead of "convert"
+# For IMv7+, use "magick" (instead of the deprecated "convert")
 magick "$IMG" -blur 0x8 "$IMG"
 
-# Kill any lingering processes (sound listeners removed)
+# Kill any lingering processes (e.g., any old sound listeners)
 pkill -f "aplay.*click.wav" 2>/dev/null
 pkill -f "evtest" 2>/dev/null
 
@@ -63,12 +63,12 @@ i3lock \
     --ringwrong-color="#E2266Eff" \
     --insidever-color="#21242Bcc" \
     --insidewrong-color="#21242Bcc" \
-    --verif-color="#FFFFFFFF" \
-    --wrong-color="#FFFFFFFF" \
+    --verif-color="#2080BBff" \
+    --wrong-color="#E2266Eff" \
     --layout-color="#FFFFFFFF" \
-    --time-color="#FFFFFFFF" \
+    --time-color="#40A5DAff" \
     --date-color="#FFFFFFFF" \
-    --greeter-color="#FFFFFFcc" \
+    --greeter-color="#2080BBff" \
     --noinput-text="" \
     --pass-media-keys \
     --radius=130 \
