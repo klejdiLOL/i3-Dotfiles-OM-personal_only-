@@ -1,7 +1,7 @@
 #!/bin/bash
 # ── CONFIG ────────────────────────────────────────────
 
-# Fonts
+# Fonts – adjust if necessary
 FONT1="JetBrainsMono Nerd Font"
 FONT2="Liberation Mono"
 FONT3="Noto Sans Mono"
@@ -13,12 +13,12 @@ IMG="/tmp/i3lock_blur.png"
 
 # Get screen resolution width (requires xrandr)
 SCREEN_WIDTH=$(xrandr | grep '*' | awk '{print $1}' | head -n1 | cut -d 'x' -f1)
-# Define a base width for scaling calculations (adjust if needed)
+# Define a base width for scaling calculations (modify if needed)
 BASE_WIDTH=1920
-# Calculate scaling factor as a float (ex: if 3840, scale will be 2.00)
+# Calculate the scaling factor (as a float)
 SCALE=$(echo "scale=2; $SCREEN_WIDTH / $BASE_WIDTH" | bc)
 
-# Base font sizes (for 1920 width display)
+# Base font sizes for a 1920-wide display
 BASE_TIME_SIZE=48
 BASE_DATE_SIZE=24
 BASE_LAYOUT_SIZE=20
@@ -26,7 +26,7 @@ BASE_GREETER_SIZE=32
 BASE_VERIF_SIZE=20
 BASE_WRONG_SIZE=20
 
-# Calculate new sizes by multiplying with the scaling factor (rounded to an integer)
+# Calculate new sizes (rounded to an integer)
 TIME_SIZE=$(printf "%.0f" $(echo "$BASE_TIME_SIZE * $SCALE" | bc))
 DATE_SIZE=$(printf "%.0f" $(echo "$BASE_DATE_SIZE * $SCALE" | bc))
 LAYOUT_SIZE=$(printf "%.0f" $(echo "$BASE_LAYOUT_SIZE * $SCALE" | bc))
@@ -34,17 +34,17 @@ GREETER_SIZE=$(printf "%.0f" $(echo "$BASE_GREETER_SIZE * $SCALE" | bc))
 VERIF_SIZE=$(printf "%.0f" $(echo "$BASE_VERIF_SIZE * $SCALE" | bc))
 WRONG_SIZE=$(printf "%.0f" $(echo "$BASE_WRONG_SIZE * $SCALE" | bc))
 
-# Debug outputs (optional)
+# Debug info (optional)
 echo "Screen width: $SCREEN_WIDTH, Scale: $SCALE"
 echo "Font sizes: Time=$TIME_SIZE, Date=$DATE_SIZE, Layout=$LAYOUT_SIZE, Greeter=$GREETER_SIZE, Verif=$VERIF_SIZE, Wrong=$WRONG_SIZE"
 
-# ── SETUP: CAPTURE AND PROCESS SCREEN ────────────────
+# ── SETUP: CAPTURE AND BLUR SCREEN ───────────────────
 
-# Capture current screen and apply a blur effect
+# Capture the current screen and blur it (using ImageMagick)
 import -window root "$IMG"
-convert "$IMG" -blur 0x8 "$IMG"
+magick "$IMG" -blur 0x8 "$IMG"
 
-# Kill any leftover sound listeners (sound is removed)
+# Kill any lingering processes (sound listeners removed)
 pkill -f "aplay.*click.wav" 2>/dev/null
 pkill -f "evtest" 2>/dev/null
 
@@ -52,16 +52,16 @@ pkill -f "evtest" 2>/dev/null
 
 i3lock \
     --image "$IMG" \
-    --inside-color="#232627ff" \
-    --ring-color="#767676ff" \
+    --inside-color="#232627cc" \
+    --ring-color="#2080bbff" \
     --line-color="#232627ff" \
     --separator-color="#444444ff" \
-    --keyhl-color="#40da76ff" \
-    --bshl-color="#cc2263ff" \
-    --ringver-color="#2080bbff" \
-    --ringwrong-color="#cc2263ff" \
-    --insidever-color="#232627ff" \
-    --insidewrong-color="#232627ff" \
+    --keyhl-color="#4bff8aff" \
+    --bshl-color="#e2266eff" \
+    --ringver-color="#40da76ff" \
+    --ringwrong-color="#e2266eff" \
+    --insidever-color="#232627cc" \
+    --insidewrong-color="#232627cc" \
     --verif-color="#ffffffff" \
     --wrong-color="#ffffffff" \
     --layout-color="#ffffffff" \
