@@ -35,7 +35,7 @@ $ cp -r .local $HOME
 ### The Polybar scripts:
 ```bash
 $ cd $HOME/.config/polybar/
-# chmod +x launch.sh
+$ chmod +x launch.sh
 $ cd scripts
 $ chmod +x launcher.sh
 $ chmod +x powermenu.sh
