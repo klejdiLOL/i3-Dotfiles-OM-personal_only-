@@ -51,6 +51,11 @@ $ chmod +x powermenu.sh
 $ cd $HOME/.config/i3lock-color/scripts/
 $ chmod +x lockscreen.sh
 ```
+### The Conky script
+```bash
+$ cd $HOME/.config/conky/
+$ chmod +x conky-launch.sh
+```
   ## ***Spin up that thing!***
   If using a minimal install, also install a Login Manager. Preferably, go with LightDM (general package name:``lightdm-gtk-greeter``)
   After that, do a **REBOOT**, choose ``i3`` (Not ``i3 (debug log``), and enjoy.
