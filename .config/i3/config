@@ -65,7 +65,7 @@ bindsym $mod+F4 exec $ranger
 bindsym $mod+P exec ~/.config/rofi/powermenu.sh
 
 # start conky (keep it running)
-exec_always --no-startup-id conky -c ~/.config/conky/conky.conf
+exec_always --no-startup-id ~/.config/conky/conky-launch.sh
 
 # start picom (keep it running)
 exec_always --no-startup-id picom
