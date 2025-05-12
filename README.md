@@ -1,5 +1,5 @@
 # i3-Dotfiles-OM-personal_only-
-# i3 Dotfiles for the OM i3 Spin (MY CONTRIBUTION ONLY)
+# i3 Dotfiles for the OM i3 Spin
 
 These are dotfiles for the i3 OM Community Spin. They're all configured to work on the specified directories, and any change in paths **!!WILL RESULT IN A BREAK!!**.
 
@@ -23,6 +23,8 @@ Follow the guide on [HowToInstall.md](https://github.com/klejdiLOL/i3-Dotfiles-O
 - Only used as a base, heavily modified
 
 ## Additional Info
+Please consider reading [Features' List](https://github.com/klejdiLOL/i3-Dotfiles-OM-personal_only-/blob/main/features.md) to know what to expect from this repository.
+
 For developing and requirements reasons, all of the dotfiles are made to be put into the user's home folder, not a system-wide folder. For this reason, only key elements will be visible when logged through ``root`` account, and the system will look broken. The shortcuts will all work though.
 
 ## Note: License
