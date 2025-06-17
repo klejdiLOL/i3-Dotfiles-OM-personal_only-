@@ -1,5 +1,11 @@
 #!/usr/bin/env bash
 
+# launcher.sh
+# author: Klejdi Janari (klejdiLOL)
+# OpenMandriva
+# https://forum.openmandriva.org/
+# Location: ~/.config/polybar/rofi/powermenu.sh
+
 dir="~/.config/rofi/rofi"
 uptime=$(uptime -p | sed -e 's/up //g')
 
