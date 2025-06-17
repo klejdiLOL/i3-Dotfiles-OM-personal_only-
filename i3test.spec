@@ -1,6 +1,6 @@
 %global debug_package %{nil}
 
-%global commit e4c6aee8f973a448d6212388c785a5061088b351
+%global commit b0739e99d6fd28269b70977cdeac4d6722b8f5b2
 %global shortcommit %(c=%{commit}; echo ${c:0:7})
 %global bumpver 1
 
