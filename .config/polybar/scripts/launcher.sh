@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+
 # powermenu.sh
 # author: Klejdi Janari (klejdiLOL)
 # OpenMandriva

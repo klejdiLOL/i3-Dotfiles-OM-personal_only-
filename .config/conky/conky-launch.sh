@@ -1,5 +1,11 @@
 #!/bin/bash
 
+# conky-launch.sh
+# author: Klejdi Janari (klejdiLOL)
+# OpenMandriva
+# https://forum.openmandriva.org/
+# Location: ~/.config/conky/conky-launch.sh
+
 # Path to the Conky temp file and config file
 TEMP_FILE="$HOME/.config/conky/conky.conf.temp"
 CONF_FILE="$HOME/.config/conky/conky.conf"
