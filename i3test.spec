@@ -22,7 +22,6 @@ Requires: picom
 Requires: feh
 Requires: ranger
 Requires: micro
-Requires: lxappearance
 Requires: dnfdrake
 Requires: chromium
 Requires: fonts-ttf-nerd-jetbrains-mono
