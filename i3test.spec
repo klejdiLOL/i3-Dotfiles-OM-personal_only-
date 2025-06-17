@@ -7,9 +7,10 @@
 Name:		i3test
 Version:	0~%{bumpver}.git%{shortcommit}
 Release:	2
-Source0:	https://github.com/vuatech/i3-Dotfiles-OM-personal_only-/archive/%{commit}/%{name}-%{shortcommit}.tar.gz
+Source0:	https://github.com/klejdiLOL/i3-Dotfiles-OM-personal_only-/archive/refs/heads/main.zip
+#https://github.com/vuatech/i3-Dotfiles-OM-personal_only-/archive/%{commit}/%{name}-%{shortcommit}.tar.gz
 Summary:	I3 Custom stuff
-URL:		https://github.com/vuatech/i3-Dotfiles-OM-personal_only-
+URL:		https://github.com/klejdiLOL/i3-Dotfiles-OM-personal_only-
 License:	GPL
 Group:		test
 
@@ -38,7 +39,7 @@ Requires: pavucontrol-qt
 %summary.
 
 %prep
-%autosetup -n i3-Dotfiles-OM-personal_only--%{commit} -p1
+%autosetup -n i3-Dotfiles-OM-personal_only--main -p1
 
 %install
 install -d %{buildroot}%{_sysconfdir}/skel/.config/conky %{buildroot}%{_sysconfdir}/skel/.config/i3 %{buildroot}%{_sysconfdir}/skel/.config/i3lock-color/scripts %{buildroot}%{_sysconfdir}/skel/.config/kitty %{buildroot}%{_sysconfdir}/skel/.config/micro/colorschemes %{buildroot}%{_sysconfdir}/skel/.config/picom %{buildroot}%{_sysconfdir}/skel/.config/polybar/scripts/rofi %{buildroot}%{_sysconfdir}/skel/.config/rofi/rofi %{buildroot}%{_bindir}
