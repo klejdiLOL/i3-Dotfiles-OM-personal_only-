@@ -6,7 +6,7 @@
 
 Name:		i3test
 Version:	0~%{bumpver}.git%{shortcommit}
-Release:	1
+Release:	2
 Source0:	https://github.com/vuatech/i3-Dotfiles-OM-personal_only-/archive/%{commit}/%{name}-%{shortcommit}.tar.gz
 Summary:	I3 Custom stuff
 URL:		https://github.com/vuatech/i3-Dotfiles-OM-personal_only-
@@ -28,6 +28,11 @@ Requires: chromium
 Requires: fonts-ttf-nerd-jetbrains-mono
 Requires: python-autotiling
 Requires: imagemagick
+Requires: lxappearance
+Requires: qt-theme-kvantum
+Requires: networkmanager-applet
+Requires: bc
+Requires: pavucontrol-qt
 
 
 %description
