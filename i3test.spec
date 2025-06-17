@@ -7,7 +7,8 @@
 Name:		i3test
 Version:	0~%{bumpver}.git%{shortcommit}
 Release:	2
-Source0:	https://github.com/vuatech/i3-Dotfiles-OM-personal_only-/archive/%{commit}/%{name}-%{shortcommit}.tar.gz
+Source0:	https://github.com/klejdiLOL/i3-Dotfiles-OM-personal_only-/archive/refs/heads/main.zip
+#https://github.com/vuatech/i3-Dotfiles-OM-personal_only-/archive/%{commit}/%{name}-%{shortcommit}.tar.gz
 Summary:	I3 Custom stuff
 URL:		https://github.com/vuatech/i3-Dotfiles-OM-personal_only-
 License:	GPL
