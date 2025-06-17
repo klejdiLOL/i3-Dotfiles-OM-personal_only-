@@ -1,4 +1,4 @@
-# How To Install My Configurations
+# How To Install the Configurations
 
 Suggest you follow the instructions as listed. You can go the other way around, installing the packages and then installing the dotfiles, but that will be a bigger hassle.
 ## Cloning the GitHub Repo
