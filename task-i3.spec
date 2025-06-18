@@ -4,7 +4,7 @@
 %global shortcommit %(c=%{commit}; echo ${c:0:7})
 %global bumpver 1
 
-Name:		i3test
+Name:		task-i3
 Version:	0~%{bumpver}.git%{shortcommit}
 Release:	2
 Source0:	https://github.com/klejdiLOL/i3-Dotfiles-OM-personal_only-/archive/refs/heads/main.zip
