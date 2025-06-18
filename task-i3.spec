@@ -1,10 +1,10 @@
 %global debug_package %{nil}
 
-%global commit b0739e99d6fd28269b70977cdeac4d6722b8f5b2
+%global commit 0dfe446d00abac910145549713774eff23db5fee5
 %global shortcommit %(c=%{commit}; echo ${c:0:7})
 %global bumpver 1
 
-Name:		i3test
+Name:		task-i3
 Version:	0~%{bumpver}.git%{shortcommit}
 Release:	2
 Source0:	https://github.com/klejdiLOL/i3-Dotfiles-OM-personal_only-/archive/refs/heads/main.zip
