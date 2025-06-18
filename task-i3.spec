@@ -33,6 +33,7 @@ Requires: qt-theme-kvantum
 Requires: networkmanager-applet
 Requires: bc
 Requires: pavucontrol-qt
+Requires: i3lock-color
 
 
 %description
