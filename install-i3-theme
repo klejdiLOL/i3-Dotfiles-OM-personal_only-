@@ -3,18 +3,6 @@
 
 mkdir -p ~/.config/
 mkdir -p ~/.local/share
-cp -rn /etc/skel/.config/* ~/.config/
-cp -rn /etc/skel/.local/share/* ~/.local/share/
-cd $HOME/.config/polybar/
-chmod +x launch.sh
-cd scripts
-chmod +x launcher.sh
-chmod +x powermenu.sh
-cd $HOME/.config/rofi/
-chmod +x launcher.sh
-chmod +x powermenu.sh
-cd $HOME/.config/i3lock-color/scripts/
-chmod +x lockscreen.sh
-cd $HOME/.config/conky/
-chmod +x conky-launch.sh
+cp -ra /etc/skel/.config/* ~/.config/
+cp -ra /etc/skel/.local/share/* ~/.local/share/
 echo "Installed  config to user profile"
