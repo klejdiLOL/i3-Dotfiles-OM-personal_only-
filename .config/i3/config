@@ -6,24 +6,74 @@
 
 set $mod Mod4
 
-# Font for window titles. Will also be used by the bar unless a different font
-# is used in the bar {} block below.
-font pango:Noto Sans Bold 8
+####################
+# Set Default Apps #
+####################
 
-# This font is widely installed, provides lots of unicode glyphs, right-to-left
-# text rendering and scalability on retina/hidpi displays (thanks to pango).
-font pango:DejaVu Sans Mono Book 8
+# set BROWSER
+set $browser chromium
 
-# Start XDG autostart .desktop files using dex. See also
-# https://wiki.archlinux.org/index.php/XDG_Autostart
+# set TERMINAL
+set $terminal kitty
+
+# set FILE BROWSER
+set $fbrowser pcmanfm-qt
+
+# set SCREENSHOT UTILITY
+set $scrsht mate-screenshot
+
+# set RANGER
+set $ranger "kitty ranger"
+
+# Start XDG autostart .desktop files using dex.
 exec --no-startup-id dex --autostart --environment i3
 
-# The combination of xss-lock, nm-applet and pactl is a popular choice, so
-# they are included here as an example. Modify as you see fit.
-
-# NetworkManager is the most popular way to manage wireless networks on Linux,
-# and nm-applet is a desktop environment-independent system tray GUI for it.
+# Start nm-applet, System Tray NM module.
 exec --no-startup-id nm-applet
+
+##############
+# Start Apps #
+##############
+
+# start FEH for the BACKGROUND
+exec_always --no-startup-id feh --bg-fill /usr/share/wallpapers/default.png
+
+# start a TERMINAL
+bindsym $mod+Return exec $terminal
+
+# start a BROWSER
+bindsym $mod+F2 exec $browser
+
+# start a FILE BROWSER
+bindsym $mod+F3 exec $fbrowser
+
+# start the SCREENSHOT UTILITY
+bindsym $mod+Print exec $scrsht
+
+# start RANGER
+bindsym $mod+r exec $ranger
+
+# start the ROFI APP MENU
+bindsym $mod+d exec "rofi -no-config -no-lazy-grab -show drun -modi drun -theme ~/.config/rofi/rofi/launcher.rasi"
+
+# start the ROFI POWER MENU
+bindsym $mod+P exec ~/.config/rofi/powermenu.sh
+
+# start CONKY (keep it running)
+exec_always --no-startup-id ~/.config/conky/conky-launch.sh
+
+# start PICOM (keep it running)
+exec_always --no-startup-id picom
+
+# start AUTOTILING (keep it running)
+exec_always --no-startup-id autotiling
+
+# start Polybar (keep it running)
+exec_always ~/.config/polybar/launch.sh &
+
+###################
+# Volume Controls #
+###################
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
@@ -32,71 +82,22 @@ bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
 
+#####################
+# Window Management #
+#####################
+
+# Font for window titles.
+font pango:Noto Sans Bold 8
+font pango:DejaVu Sans Mono Book 8
+
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
-# move tiling windows via drag & drop by left-clicking into the title bar,
-# or left-clicking anywhere into the window while holding the floating modifier.
+# move tiling windows via drag & drop by left-clicking into the title bar, or left-clicking anywhere into the window while holding the floating modifier.
 tiling_drag modifier titlebar
-
-# start feh for the background
-exec_always --no-startup-id feh --bg-fill /usr/share/wallpapers/default.png
-
-# start a terminal
-bindsym $mod+Return exec $terminal
-
-# start browser
-bindsym $mod+F2 exec $browser
-
-# start file browser
-bindsym $mod+F3 exec $fbrowser
-
-# start screenshot utility
-bindsym $mod+Print exec $scrsht
-
-# start ranger
-bindsym $mod+F4 exec $ranger
-
-# start Rofi Power Menu
-bindsym $mod+P exec ~/.config/rofi/powermenu.sh
-
-# start conky (keep it running)
-exec_always --no-startup-id ~/.config/conky/conky-launch.sh
-
-# start picom (keep it running)
-exec_always --no-startup-id picom
-
-# start autotiling (keep it running)
-exec_always --no-startup-id autotiling
 
 # kill focused window
 bindsym $mod+Shift+q kill
-
-# start dmenu (a program launcher)
-# bindsym $mod+d exec --no-startup-id dmenu_run
-# A more modern dmenu replacement is rofi:
-bindsym $mod+d exec "rofi -no-config -no-lazy-grab -show drun -modi drun -theme ~/.config/rofi/rofi/launcher.rasi"
-# There also is i3-dmenu-desktop which only displays applications shipping a
-# .desktop file. It is a wrapper around dmenu, so you need that installed.
-# bindcode $mod+40 exec --no-startup-id i3-dmenu-desktop
-
-# set ranger
-set $ranger ranger
-
-# set browser
-set $browser chromium
-
-# set terminal
-set $terminal kitty
-
-# set file browser
-set $fbrowser thunar
-
-# set screenshot utility
-set $scrsht mate-screenshot
-
-# set window border
-for_window [class="^.*"] border pixel 4
 
 # change focus
 bindsym $mod+j focus left
@@ -148,8 +149,71 @@ bindsym $mod+a focus parent
 # focus the child container
 #bindsym $mod+d focus child
 
-# Define names for default workspaces for which we configure key bindings later on.
-# We use variables to avoid repeating the names in multiple places.
+# resize window (you can also use the mouse for that)
+mode "resize" {
+        # These bindings trigger as soon as you enter the resize mode
+
+        # Pressing left will shrink the window’s width.
+        # Pressing right will grow the window’s width.
+        # Pressing up will shrink the window’s height.
+        # Pressing down will grow the window’s height.
+        bindsym j resize shrink width 10 px or 10 ppt
+        bindsym k resize grow height 10 px or 10 ppt
+        bindsym l resize shrink height 10 px or 10 ppt
+        bindsym semicolon resize grow width 10 px or 10 ppt
+
+        # same bindings, but for the arrow keys
+        bindsym Left resize shrink width 10 px or 10 ppt
+        bindsym Down resize grow height 10 px or 10 ppt
+        bindsym Up resize shrink height 10 px or 10 ppt
+        bindsym Right resize grow width 10 px or 10 ppt
+
+        # back to normal: Enter or Escape or $mod+r
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+        bindsym $mod+r mode "default"
+}
+
+bindsym $mod+r mode "resize"
+
+# set window border
+for_window [class="^.*"] border pixel 4
+
+for_window [class="^.*"] border pixel 0
+gaps inner 10
+gaps outer 0
+
+# add window focus borders
+
+for_window [class="^.*"] border pixel 2
+
+set $om-blue   #2080BB
+set $white     #ffffff
+set $om-pink   #E2266E
+set $red       #f38ba8
+set $maroon    #eba0ac
+set $peach     #fab387
+set $yellow    #f9e2af
+set $green     #a6e3a1
+set $text      #cdd6f4
+set $overlay0  #6c7086
+set $base      #1e1e2e
+set $mantle    #181825
+set $crust     #11111b
+
+# target                 title     bg       text     indicator    border
+client.focused           $mantle   $om-pink $mantle  $om-blue     $white
+client.focused_inactive  $overlay0 $om-pink $text    $om-blue     $overlay0
+client.unfocused         $overlay0 $om-pink $text    $om-blue     $overlay0
+client.urgent            $peach    $base    $peach   $overlay0    $peach
+client.placeholder       $overlay0 $base    $text    $overlay0    $overlay0
+client.background        $base
+
+##############
+# Workspaces #
+##############
+
+# Define names for default workspaces.
 set $ws1 "1"
 set $ws2 "2"
 set $ws3 "3"
@@ -185,69 +249,15 @@ bindsym $mod+Shift+8 move container to workspace number $ws8
 bindsym $mod+Shift+9 move container to workspace number $ws9
 bindsym $mod+Shift+0 move container to workspace number $ws10
 
+#########################
+# i3 Session Management #
+#########################
+
 # reload the configuration file
 bindsym $mod+Shift+c reload
+
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
+
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
-
-# resize window (you can also use the mouse for that)
-mode "resize" {
-        # These bindings trigger as soon as you enter the resize mode
-
-        # Pressing left will shrink the window’s width.
-        # Pressing right will grow the window’s width.
-        # Pressing up will shrink the window’s height.
-        # Pressing down will grow the window’s height.
-        bindsym j resize shrink width 10 px or 10 ppt
-        bindsym k resize grow height 10 px or 10 ppt
-        bindsym l resize shrink height 10 px or 10 ppt
-        bindsym semicolon resize grow width 10 px or 10 ppt
-
-        # same bindings, but for the arrow keys
-        bindsym Left resize shrink width 10 px or 10 ppt
-        bindsym Down resize grow height 10 px or 10 ppt
-        bindsym Up resize shrink height 10 px or 10 ppt
-        bindsym Right resize grow width 10 px or 10 ppt
-
-        # back to normal: Enter or Escape or $mod+r
-        bindsym Return mode "default"
-        bindsym Escape mode "default"
-        bindsym $mod+r mode "default"
-}
-
-bindsym $mod+r mode "resize"
-
-for_window [class="^.*"] border pixel 0
-gaps inner 10
-gaps outer 0
-
-# Start Polybar (keep it running)
-exec_always ~/.config/polybar/launch.sh &
-
-# add window focus borders
-
-for_window [class="^.*"] border pixel 2
-
-set $om-blue   #2080BB
-set $white     #ffffff
-set $om-pink   #E2266E
-set $red       #f38ba8
-set $maroon    #eba0ac
-set $peach     #fab387
-set $yellow    #f9e2af
-set $green     #a6e3a1
-set $text      #cdd6f4
-set $overlay0  #6c7086
-set $base      #1e1e2e
-set $mantle    #181825
-set $crust     #11111b
-
-# target                 title     bg       text     indicator    border
-client.focused           $mantle   $om-pink $mantle  $om-blue     $white
-client.focused_inactive  $overlay0 $om-pink $text    $om-blue     $overlay0
-client.unfocused         $overlay0 $om-pink $text    $om-blue     $overlay0
-client.urgent            $peach    $base    $peach   $overlay0    $peach
-client.placeholder       $overlay0 $base    $text    $overlay0    $overlay0
-client.background        $base
